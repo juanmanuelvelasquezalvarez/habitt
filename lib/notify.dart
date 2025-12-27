@@ -41,7 +41,7 @@ class NotifyState extends State<Notify>{
             },
           ),
           Divider(),
-          text('Select Habits for Notification'),
+          text('Select Habits to Notify'),
           SizedBox(height: 10),
           ...all.entries.map((e){
             final c=Color(e.value);
