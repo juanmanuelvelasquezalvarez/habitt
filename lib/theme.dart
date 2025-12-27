@@ -35,26 +35,25 @@ Container field(TextEditingController c, IconData i, String s, {pw=false})=>Cont
   ),
 );
 Container list(String? v, List<DropdownMenuItem<String>> d, ValueChanged c)=>Container(
-            padding: EdgeInsets.symmetric(horizontal: 12),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(),
-            ),
-            child: DropdownButton<String>(
-              value: v,
-              icon: Icon(Icons.arrow_drop_down),
-              underline: SizedBox(),
-              items: d,
-              onChanged: c
-            ),
-          );
+  padding: EdgeInsets.symmetric(horizontal: 12),
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(20),
+    border: Border.all(),
+  ),
+  child: DropdownButton<String>(
+    value: v,
+    icon: Icon(Icons.arrow_drop_down),
+    underline: SizedBox(),
+    items: d,
+    onChanged: c
+  ),
+);
 const page=['Home','Add habit','Log out','Notifications','User data','Weekly Report','Register','Log in'];
 const icon=[Icons.home,Icons.add,Icons.logout,Icons.notifications,Icons.person,Icons.view_week,Icons.dynamic_form,Icons.login];
 Scaffold template(BuildContext c, int t, Widget w)=>Scaffold(
   appBar: AppBar(
     centerTitle: true,
-    title: text(page[t],size:24),
-    leading: t==0?null:Icon(icon[t])
+    title: text(page[t],size:24)
   ),
   drawer: t>5?null:Drawer(
     child: ListView(
